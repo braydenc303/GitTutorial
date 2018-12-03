@@ -3,7 +3,7 @@ Merge conflicts on purpose
 
 -Create a new repository called merge-conflict and clone it to your computer.
 
--Open the index.html file. It should look like this.
+-Create an index file that looks like this:
 
 <!DOCTYPE html>
 <html lang="en">
