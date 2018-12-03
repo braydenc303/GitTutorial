@@ -63,22 +63,14 @@ To be safe, lets try to merge the master branch into my-branch. That way, if the
 
 Do a git merge master
 
-If this works and the conflict occurs, handle the next few steps the same as below but with these changes:
 
-Change the error message.
-
-Once the conflict is resolved, do a git push origin my-branch. Then go to git hub to determine the rest of the workflow.
 
 -----------------------------------------------------------
--Switch to the master branch.
 
--Do a git pull origin master to make sure that you have the most up to date code.
-
--Do a git merge my-branch
 
 -Notice the alert about the merge conflict.
 ****
-$ git merge my-branch
+$ git merge master
 Auto-merging index.html
 CONFLICT (content): Merge conflict in index.html
 Automatic merge failed; fix conflicts and then commit the result.
@@ -86,11 +78,8 @@ Automatic merge failed; fix conflicts and then commit the result.
 -Look at the file in vsCode Fix the merge conflict by choosing which change to accept, and save your file.
 
 -Do a git status. You should receive a message similar to:
-	
-On branch master
-Your branch is ahead of 'origin/master' by 1 commit.
-  (use "git push" to publish your local commits)
-
+---------------Make sure this error message looks correct	
+On branch my-branch
 You have unmerged paths.
   (fix conflicts and run "git commit")
   (use "git merge --abort" to abort the merge)
@@ -101,9 +90,10 @@ Unmerged paths:
         both modified:   index.html
 
 no changes added to commit (use "git add" and/or "git commit -a")
-
+----------------------------------------------------------
 -Do a git add.
 
 -Do a git commit -m”Resolved merge conflict.”
 
--You can now push to origin/master and delete the other branch.
+Once the conflict is resolved, do a git push origin my-branch. Then go to git hub to determine the rest of the workflow.
+
