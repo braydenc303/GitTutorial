@@ -37,7 +37,11 @@ We will just leave this alone for now.
 -Switch into to the other branch by typing:
 	git checkout my-branch
 
--From that branch, open the file in your code editor and change the first paragraph to say,
+-From that branch, open the file in your code editor. Above your paragraphs, add:
+
+<h2>This is an experiment</h2>,
+
+and change the first paragraph to say,
 “I want to mess this up.” 
 
 -Save the file.
