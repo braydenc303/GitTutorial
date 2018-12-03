@@ -26,7 +26,8 @@ Merge conflicts on purpose
 -Save the file.
 
 -Do a git add, git commit, and a git push origin master.
-Imagine some time has passed, and you'd like to develop on another branch.
+
+-Imagine some time has passed, and you'd like to develop on another branch.
 
 -At the command line, create a branch called my-branch.
 
