@@ -3,7 +3,7 @@ Merge conflicts on purpose
 
 -Create a new repository called merge-conflict and clone it to your computer.
 
--Create an index.html file that looks like this.
+-Open the index.html file. It should look like this.
 
 <!DOCTYPE html>
 <html lang="en">
@@ -28,7 +28,7 @@ Merge conflicts on purpose
 -Do a git add, git commit, and a git push origin master.
 Imagine some time has passed, and you'd like to develop on another branch.
 
--Create a branch called my-branch.
+-At the command line, create a branch called my-branch.
 
 -Switch into to the other branch by typing:
 	git checkout my-branch
