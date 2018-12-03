@@ -46,9 +46,7 @@ and change the first paragraph to say,
 
 -Save the file.
 
--Once again, do a git add.
-
--Commit the changes to the repository with a commit message.
+-Once again, do a git add, then commit the changes to the repository with a commit message.
 
 Let's say you decide you'd like to merge the changes from your branch into the master branch. This is where you can run into problems. You have made commits on separate branches that change the same line of code in different way. Now when you try to merge your other branch into master, Git will not know which changes to keep. Watch what happens.
 
