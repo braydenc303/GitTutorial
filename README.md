@@ -24,8 +24,7 @@ Merge conflicts on purpose
 -You decide to create another branch to use for experimental features.
 
 -At the command line, create a branch called my-branch by typing: 
-
-git branch my-branch
+    git branch my-branch
 
 Press enter. We will just leave this alone for now.
 
@@ -58,7 +57,7 @@ To be safe, lets try to merge the master branch into my-branch. That way, if the
 
 -First, switch to the master branch.
 
--Do a git pull origin master to make sure that you have the most up to date code.
+-Do a git pull origin master to make sure that you have the most up to date code. It should already be up to date, but do this as a best practice, especially if you are working in a group.
 
 -Switch back to my-branch.
 
