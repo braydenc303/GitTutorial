@@ -23,8 +23,11 @@ Merge conflicts on purpose
 
 -You decide to create another branch to use for experimental features.
 
--At the command line, create a branch called my-branch.
-We will just leave this alone for now.
+-At the command line, create a branch called my-branch by typing: 
+
+git branch my-branch
+
+Press enter. We will just leave this alone for now.
 
 -On the master branch. In the code editor, edit the first paragraph to say, “I want to screw this up.”
 
