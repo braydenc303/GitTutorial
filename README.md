@@ -50,8 +50,7 @@ and change the first paragraph to say,
 
 -Once again, do a git add, then commit the changes to the repository with a commit message.
 
-Let's say you decide you'd like to merge the changes from your branch into the master branch. This is where you can run into problems. You have made commits on separate branches that change the same line of code in different way. Now when you try to merge your other branch into master, Git will not know which changes to keep. Watch what happens.
-------------------- This is where I may want to change the workflow.
+Let's say you decide you are now ready add these changes to the working version of your site. This is where you can run into problems. You have made commits on separate branches that change the same line of code in different way. Now when you try to merge your other branch into master, Git will not know which changes to keep. Watch what happens.
 
 To be safe, lets try to merge the master branch into my-branch. That way, if there is a merge conflict, we can handle that here.
 
@@ -92,14 +91,9 @@ no changes added to commit (use "git add" and/or "git commit -a")
 
 Once the conflict is resolved, do a git push origin my-branch. 
 
-Now go to github website. Navigate to your repository. You should be promted to create a pull request. Click on:
-
-to create a pull request.
+Now go to github website. Navigate to your repository. You my be promted to create a pull request. If so click to create the merge and pull request. If not, navigate to your branch and create a new pull request anyway.
 
 Because of the workflow the we have used to this point, there should be no merge conflicts. This because you are working on this by yourself. This may not be the case if you are working in a group. However, conflicts should be minimized using this approach.
-
-
-
 
 ----------------------------------------------------------
 The first portion of this exercise used a practice that is unsafe if working in a group. Typically you do not want to push to origin master if you are ever working in a group. Try to follow the best practices below.
