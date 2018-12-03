@@ -16,7 +16,7 @@ Merge conflicts on purpose
 <body>
     <div>
         <p>I want to make a mess of this.</p>
-        <p>I don't even care if we fix it. I just want to see what happens 	when it breaks.</p>
+        <p>I don't even care if we fix it. I just want to see what happens when it breaks.</p>
     </div>
 </body>
 </html>
