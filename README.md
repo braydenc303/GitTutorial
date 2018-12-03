@@ -49,7 +49,25 @@ and change the first paragraph to say,
 -Once again, do a git add, then commit the changes to the repository with a commit message.
 
 Let's say you decide you'd like to merge the changes from your branch into the master branch. This is where you can run into problems. You have made commits on separate branches that change the same line of code in different way. Now when you try to merge your other branch into master, Git will not know which changes to keep. Watch what happens.
+------------------- This is where I may want to change the workflow.
 
+To be safe, lets try to merge the master branch into my-branch. That way, if there is a merge conflict, we can handle that here.
+
+-First, switch to the master branch.
+
+-Do a git pull origin master to make sure that you have the most up to date code.
+
+-Switch back to my-branch.
+
+Do a git merge master
+
+If this works and the conflict occurs, handle the next few steps the same as below but with these changes:
+
+Change the error message.
+
+Once the conflict is resolved, do a git push origin my-branch. Then go to git hub to determine the rest of the workflow.
+
+-----------------------------------------------------------
 -Switch to the master branch.
 
 -Do a git pull origin master to make sure that you have the most up to date code.
