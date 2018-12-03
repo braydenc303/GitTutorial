@@ -63,11 +63,6 @@ To be safe, lets try to merge the master branch into my-branch. That way, if the
 
 Do a git merge master
 
-
-
------------------------------------------------------------
-
-
 -Notice the alert about the merge conflict.
 ****
 $ git merge master
@@ -95,5 +90,11 @@ no changes added to commit (use "git add" and/or "git commit -a")
 
 -Do a git commit -m”Resolved merge conflict.”
 
-Once the conflict is resolved, do a git push origin my-branch. Then go to git hub to determine the rest of the workflow.
+Once the conflict is resolved, do a git push origin my-branch. 
+
+Now go to github website. Navigate to your repository. You should be promted to create a pull request. Click on:
+
+to create a pull request.
+
+Because of the workflow the we have used to this point, there should be no merge conflicts. This because you are working on this by yourself. This may not be the case if you are working in a group. However, conflicts should be minimized using this approach.
 
