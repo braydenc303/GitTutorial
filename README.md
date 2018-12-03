@@ -72,7 +72,7 @@ Automatic merge failed; fix conflicts and then commit the result.
 -Look at the file in vsCode Fix the merge conflict by choosing which change to accept, and save your file.
 
 -Do a git status. You should receive a message similar to:
----------------Make sure this error message looks correct	
+	
 On branch my-branch
 You have unmerged paths.
   (fix conflicts and run "git commit")
