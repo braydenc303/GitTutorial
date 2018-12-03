@@ -21,15 +21,18 @@ Merge conflicts on purpose
 </body>
 </html>
 
+-You decide to create another branch to use for experimental features.
+
+-At the command line, create a branch called my-branch.
+We will just leave this alone for now.
+
 -On the master branch. In the code editor, edit the first paragraph to say, “I want to screw this up.”
 
 -Save the file.
 
 -Do a git add, git commit, and a git push origin master.
 
--Imagine some time has passed, and you'd like to develop on another branch.
-
--At the command line, create a branch called my-branch.
+-Imagine some time has passed, and you'd like to develop on the other branch.
 
 -Switch into to the other branch by typing:
 	git checkout my-branch
@@ -53,8 +56,12 @@ Let's say you decide you'd like to merge the changes from your branch into the m
 
 -Notice the alert about the merge conflict.
 ****
+$ git merge my-branch
+Auto-merging index.html
+CONFLICT (content): Merge conflict in index.html
+Automatic merge failed; fix conflicts and then commit the result.
 
--Fix the merge conflict by choosing which change to accept in vsCode, and save your file.
+-Look at the file in vsCode Fix the merge conflict by choosing which change to accept, and save your file.
 
 -Do a git status. You should receive a message similar to:
 	
