@@ -98,3 +98,42 @@ to create a pull request.
 
 Because of the workflow the we have used to this point, there should be no merge conflicts. This because you are working on this by yourself. This may not be the case if you are working in a group. However, conflicts should be minimized using this approach.
 
+
+
+
+----------------------------------------------------------
+The first portion of this exercise used a practice that is unsafe if working in a group. Typically you do not want to push to origin master if you are ever working in a group. Try to follow the best practices below.
+
+Safe workflow practices.
+---------------------------------------------------------
+
+On your computer, create a folder where you want to store the repository.
+
+On the github website navigate to the repository you'd like to clone and click on the clone repository button. Copy the link provided.
+
+On your computer in your terminal, make sure you are in the folder where you'd like to store the repository. Type:
+    git clone repository-link
+Pasting the repository link from github where the above line says, "repository-link."
+
+Create a new branch and give it a name appropriate to your current task.
+
+Switch to the new branch by typing:
+    git checkout new-branch
+Where new-branch is the name you have given to your branch.
+
+Do your work in here. As you make progress be sure to do git adds and commits regularly.
+
+Once you feel that it is time to add your code to the project, switch to the master branch and do a git pull to make sure you have the most up to date code.
+
+Switch back to your branch.
+
+Type git merge master.
+
+Resolve conflicts as necessary.
+
+Once resolved, git add, git commit, and git push origin your-branch. Where your-branch is replaced with the name of the branch you are working in.
+
+Once that is done, you can navigate on the github website to create a pull request and submit it for review.
+
+Once your code is approved and added to the project's working master, you can delete your branch, pull origin master into your local master, create a new branch for your current task, and repeat this process safely.
+
