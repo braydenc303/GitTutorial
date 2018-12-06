@@ -1,4 +1,4 @@
-# dBGitExperiments
+# GitTutorial
 Merge conflicts on purpose:
 A Tutorial, and Best Practices For Git Workflow.
 
