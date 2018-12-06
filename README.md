@@ -1,5 +1,6 @@
 # dBGitExperiments
-Merge conflicts on purpose
+Merge conflicts on purpose:
+A Tutorial, and Best Practices For Git Workflow.
 
 -Create a new repository called merge-conflict and clone it to your computer.
 
