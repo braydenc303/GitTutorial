@@ -6,6 +6,7 @@ A Tutorial, and Best Practices For Git Workflow.
 
 -Create an index file that looks like this:
 
+```
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -21,6 +22,7 @@ A Tutorial, and Best Practices For Git Workflow.
     </div>
 </body>
 </html>
+```
 
 -You decide to create another branch to use for experimental features.
 
@@ -42,7 +44,9 @@ Press enter. We will just leave this alone for now.
 
 -From that branch, open the file in your code editor. Above your paragraphs, add:
 
+```
 <h2>This is an experiment</h2>,
+```
 
 and change the first paragraph to say,
 “I want to mess this up.” 
