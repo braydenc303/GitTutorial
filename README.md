@@ -136,3 +136,38 @@ Once that is done, you can navigate on the github website to create a pull reque
 
 Once your code is approved and added to the project's working master, you can delete your branch, pull origin master into your local master, create a new branch for your current task, and repeat this process safely.
 
+## GitHub Workflow
+
+### When following these instructions, the lines that do not begin with an uppercase letter are to be typed into the command line. Of course, you will want to substitute the name of your branch wherever you see branch-name.
+
+1. git clone repository
+  a. (If using npm or yarn packages) yarn/npm install
+2. git checkout -b branch-name (only if creating a new branch)
+  * By convention git hub repositories and branches do not use camel case, so use dashes.
+  * As much as possible try to be working on different files from your team mates.
+  a. git status  (to see if there are changes that need to be added)
+  b. git add . (to add changes)
+  c. git commit -m "description of work you did"
+  * Once you have a change to push.
+3. git checkout master
+4. git pull origin master
+  a. (If using npm or yarn packages) yarn/npm install
+5. git checkout branch-name
+6. git merge master
+  * This is where you will see conflicts if there are any
+  * You should be able to reconcile these in VS Code at this point.
+7. Re-run your code to ensure everything still works.
+  * If it does not, fix the code, and start over again at step 3.
+8. git push origin branch-name
+9. Create a pull request on GitHub
+  a. Let the team know about Pull Request on Slack
+10. Once your code has been merged: git checkout master
+11. git pull origin master
+  a. yarn/npm install (If using npm or yarn packages)
+12. Run the code in your master branch to ensure one last time that everything is working as it should. If not, speak with your team.
+13. When working correctly: git branch -d branch-name
+14. You may get a warning about your branch not being fully merged at this point. If so: git branch -D branch-name
+15. git checkout -b new-branch-name
+16. Make sure to do an npm install before you start again just in-case there are new packages in the master.
+17. Do some more work and start again at step 3.
+
