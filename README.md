@@ -1,110 +1,113 @@
 # GitTutorial
-Merge conflicts on purpose:
-A Tutorial, and Best Practices For Git Workflow.
 
--Create a new repository called merge-conflict and clone it to your computer.
+## Merge conflicts on purpose: A Tutorial, and Best Practices For Git Workflow
 
--Create an index file that looks like this:
+1. Create a new repository called merge-conflict and clone it to your computer.
 
-```
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-</head>
-<body>
-    <div>
-        <p>I want to make a mess of this.</p>
-        <p>I don't even care if we fix it. I just want to see what happens when it breaks.</p>
-    </div>
-</body>
-</html>
-```
+2. Create an index file that looks like this:
 
--You decide to create another branch to use for experimental features.
+    ```html
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Document</title>
+    </head>
+    <body>
+        <div>
+            <p>I want to make a mess of this.</p>
+            <p>I don't even care if we fix it. I just want to see what happens when it breaks.</p>
+        </div>
+    </body>
+    </html>
+    ```
 
--At the command line, create a branch called my-branch by typing: 
-    git branch my-branch
+    - You decide to create another branch to use for experimental features.
 
-Press enter. We will just leave this alone for now.
+3. At the command line, create a branch called my-branch by typing: git branch my-branch
 
--On the master branch. In the code editor, edit the first paragraph to say, “I want to screw this up.”
+4. Press enter. We will just leave this alone for now.
 
--Save the file.
+5. On the master branch. In the code editor, edit the first paragraph to say, “I want to screw this up.”
 
--Do a git add, git commit, and a git push origin master.
+6. Save the file.
 
--Imagine some time has passed, and you'd like to develop on the other branch.
+7. Do a git add, git commit, and a git push origin master.
 
--Switch into to the other branch by typing:
-	git checkout my-branch
+    - Imagine some time has passed, and you'd like to develop on the other branch.
 
--From that branch, open the file in your code editor. Above your paragraphs, add:
+8. Switch into to the other branch by typing: git checkout my-branch
 
-```
-<h2>This is an experiment</h2>,
-```
+9. From that branch, open the file in your code editor. Above your paragraphs, add:
 
-and change the first paragraph to say,
-“I want to mess this up.” 
+    ```html
+    <h2>This is an experiment</h2>
+    ```
 
--Save the file.
+    - and change the first paragraph to say,
+“I want to mess this up.”
 
--Once again, do a git add, then commit the changes to the repository with a commit message.
+10. Save the file.
+
+11. Once again, do a git add, then commit the changes to the repository with a commit message.
 
 Let's say you decide you are now ready add these changes to the working version of your site. This is where you can run into problems. You have made commits on separate branches that change the same line of code in different way. Now when you try to merge your other branch into master, Git will not know which changes to keep. Watch what happens.
 
 To be safe, lets try to merge the master branch into my-branch. That way, if there is a merge conflict, we can handle that here.
 
--First, switch to the master branch.
+1. First, switch to the master branch.
 
--Do a git pull origin master to make sure that you have the most up to date code. It should already be up to date, but do this as a best practice, especially if you are working in a group.
+2. Do a git pull origin master to make sure that you have the most up to date code. It should already be up to date, but do this as a best practice, especially if you are working in a group.
 
--Switch back to my-branch.
+3. Switch back to my-branch.
 
-Do a git merge master
+4. Do a git merge master
 
--Notice the alert about the merge conflict.
-****
-$ git merge master
-Auto-merging index.html
-CONFLICT (content): Merge conflict in index.html
-Automatic merge failed; fix conflicts and then commit the result.
+5. Notice the alert about the merge conflict.
 
--Look at the file in vsCode Fix the merge conflict by choosing which change to accept, and save your file.
+    ```bash
+    $ git merge master
+    Auto-merging index.html
+    CONFLICT (content): Merge conflict in index.html
+    Automatic merge failed; fix conflicts and then commit the result.
+    ```
 
--Do a git status. You should receive a message similar to:
-	
-On branch my-branch
-You have unmerged paths.
-  (fix conflicts and run "git commit")
-  (use "git merge --abort" to abort the merge)
+6. Look at the file in vsCode Fix the merge conflict by choosing which change to accept, and save your file.
 
-Unmerged paths:
-  (use "git add <file>..." to mark resolution)
+7. Do a git status. You should receive a message similar to:
 
-        both modified:   index.html
+    ```bash
+    On branch my-branch
+    You have unmerged paths.
+      (fix conflicts and run "git commit")
+      (use "git merge --abort" to abort the merge)
 
-no changes added to commit (use "git add" and/or "git commit -a")
-----------------------------------------------------------
--Do a git add.
+    Unmerged paths:
+      (use "git add <file>..." to mark resolution)
 
--Do a git commit -m”Resolved merge conflict.”
+            both modified:   index.html
 
-Once the conflict is resolved, do a git push origin my-branch. 
+    no changes added to commit (use "git add" and/or "git commit -a")
+    ```
+
+8. Do a: git add .
+
+9. Do a: git commit -m”Resolved merge conflict.”
+
+10. Once the conflict is resolved, do a: git push origin my-branch.
 
 Now go to github website. Navigate to your repository. You my be promted to create a pull request. If so click to create the merge and pull request. If not, navigate to your branch and create a new pull request anyway.
 
 Because of the workflow the we have used to this point, there should be no merge conflicts. This because you are working on this by yourself. This may not be the case if you are working in a group. However, conflicts should be minimized using this approach.
 
-----------------------------------------------------------
+---
 The first portion of this exercise used a practice that is unsafe if working in a group. Typically you do not want to push to origin master if you are ever working in a group. Try to follow the best practices below.
 
-Safe workflow practices.
----------------------------------------------------------
+## Safe workflow practices
+
+---
 
 On your computer, create a folder where you want to store the repository.
 
@@ -138,36 +141,64 @@ Once your code is approved and added to the project's working master, you can de
 
 ## GitHub Workflow
 
-### When following these instructions, the lines that do not begin with an uppercase letter are to be typed into the command line. Of course, you will want to substitute the name of your branch wherever you see branch-name.
+  >When following these instructions, the lines that do not begin with an uppercase letter are to be typed into the command line. Of course, you will want to substitute the name of your branch wherever you see branch-name.
 
 1. git clone repository
-  a. (If using npm or yarn packages) yarn/npm install
-2. git checkout -b branch-name (only if creating a new branch)
-  * By convention git hub repositories and branches do not use camel case, so use dashes.
-  * As much as possible try to be working on different files from your team mates.
-  a. git status  (to see if there are changes that need to be added)
-  b. git add . (to add changes)
-  c. git commit -m "description of work you did"
-  * Once you have a change to push.
-3. git checkout master
-4. git pull origin master
-  a. (If using npm or yarn packages) yarn/npm install
-5. git checkout branch-name
-6. git merge master
-  * This is where you will see conflicts if there are any
-  * You should be able to reconcile these in VS Code at this point.
-7. Re-run your code to ensure everything still works.
-  * If it does not, fix the code, and start over again at step 3.
-8. git push origin branch-name
-9. Create a pull request on GitHub
-  a. Let the team know about Pull Request on Slack
-10. Once your code has been merged: git checkout master
-11. git pull origin master
-  a. yarn/npm install (If using npm or yarn packages)
-12. Run the code in your master branch to ensure one last time that everything is working as it should. If not, speak with your team.
-13. When working correctly: git branch -d branch-name
-14. You may get a warning about your branch not being fully merged at this point. If so: git branch -D branch-name
-15. git checkout -b new-branch-name
-16. Make sure to do an npm install before you start again just in-case there are new packages in the master.
-17. Do some more work and start again at step 3.
 
+    a. (If using npm or yarn packages) yarn/npm install
+
+2. git checkout -b branch-name (only if creating a new branch)
+
+    - By convention git hub repositories and branches do not use camel case, so use dashes.
+
+    - As much as possible try to be working on different files from your team mates.
+
+    a. git status  (to see if there are changes that need to be added)
+
+    b. git add . (to add changes)
+
+    c. git commit -m "description of work you did"
+
+    - Once you have a change to push.
+
+3. git checkout master
+
+4. git pull origin master
+
+    a. (If using npm or yarn packages) yarn/npm install
+
+5. git checkout branch-name
+
+6. git merge master
+
+    - This is where you will see conflicts if there are any
+
+    - You should be able to reconcile these in VS Code at this point.
+
+7. Re-run your code to ensure everything still works.
+
+    - If it does not, fix the code, and start over again at step 3.
+
+8. git push origin branch-name
+
+9. Create a pull request on GitHub
+
+    a. Let the team know about Pull Request on Slack
+
+10. Once your code has been merged: git checkout master
+
+11. git pull origin master
+
+    a. yarn/npm install (If using npm or yarn packages)
+
+12. Run the code in your master branch to ensure one last time that everything is working as it should. If not, speak with your team.
+
+13. When working correctly: git branch -d branch-name
+
+14. You may get a warning about your branch not being fully merged at this point. If so: git branch -D branch-name
+
+15. git checkout -b new-branch-name
+
+16. Make sure to do an npm install before you start again just in-case there are new packages in the master.
+
+17. Do some more work and start again at step 3.
