@@ -139,7 +139,7 @@ Once that is done, you can navigate on the github website to create a pull reque
 
 Once your code is approved and added to the project's working master, you can delete your branch, pull origin master into your local master, create a new branch for your current task, and repeat this process safely.
 
-## GitHub Workflow
+## GitHub Centralized Workflow
 
   >When following these instructions, the lines that do not begin with an uppercase letter are to be typed into the command line. Of course, you will want to substitute the name of your branch wherever you see branch-name.
 
