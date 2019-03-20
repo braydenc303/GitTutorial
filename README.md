@@ -137,7 +137,7 @@ Once resolved, git add, git commit, and git push origin your-branch. Where your-
 
 Once that is done, you can navigate on the github website to create a pull request and submit it for review.
 
-Once your code is approved and added to the project's working master, you can delete your branch, pull origin master into your local master, create a new branch for your current task, and repeat this process safely.
+Once your code is approved and added to the project's working master, you can delete your branch on the git hub site (Don't delete your branch on your local machine. Save your branches until your project is ready to go live just in case something is lost or broken in a way that is difficult to recreate.), pull origin master into your local master, create a new branch for your current task, and repeat this process safely.
 
 ## GitHub Centralized Workflow
 
@@ -193,12 +193,20 @@ Once your code is approved and added to the project's working master, you can de
 
 12. Run the code in your master branch to ensure one last time that everything is working as it should. If not, speak with your team.
 
-13. When working correctly: git branch -d branch-name
-
-14. You may get a warning about your branch not being fully merged at this point. If so: git branch -D branch-name
-
 15. git checkout -b new-branch-name
 
 16. Make sure to do an npm install before you start again just in-case there are new packages in the master.
 
 17. Do some more work and start again at step 3.
+
+    - If your have finished your project and everything is working as it should, you can now delete your local branches.
+
+18. git branch
+
+    - To get a list of branches on your local machine.
+    
+19. git branch -d branch-name
+
+    - For each of your local branches.
+
+20. You may get a warning about your branch not being fully merged at this point. If so: git branch -D branch-name
