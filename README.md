@@ -103,55 +103,34 @@ Now go to github website. Navigate to your repository. You my be promted to crea
 Because of the workflow the we have used to this point, there should be no merge conflicts. This because you are working on this by yourself. This may not be the case if you are working in a group. However, conflicts should be minimized using this approach.
 
 ---
+
 The first portion of this exercise used a practice that is unsafe if working in a group. Typically you do not want to push to origin master if you are ever working in a group. Try to follow the best practices below.
 
-## Safe workflow practices
-
 ---
-
-On your computer, create a folder where you want to store the repository.
-
-On the github website navigate to the repository you'd like to clone and click on the clone repository button. Copy the link provided.
-
-On your computer in your terminal, make sure you are in the folder where you'd like to store the repository. Type:
-    git clone repository-link
-Pasting the repository link from github where the above line says, "repository-link."
-
-Create a new branch and give it a name appropriate to your current task.
-
-Switch to the new branch by typing:
-    git checkout new-branch
-Where new-branch is the name you have given to your branch.
-
-Do your work in here. As you make progress be sure to do git adds and commits regularly.
-
-Once you feel that it is time to add your code to the project, switch to the master branch and do a git pull to make sure you have the most up to date code.
-
-Switch back to your branch.
-
-Type git merge master.
-
-Resolve conflicts as necessary.
-
-Once resolved, git add, git commit, and git push origin your-branch. Where your-branch is replaced with the name of the branch you are working in.
-
-Once that is done, you can navigate on the github website to create a pull request and submit it for review.
-
-Once your code is approved and added to the project's working master, you can delete your branch on the git hub site (Don't delete your branch on your local machine. Save your branches until your project is ready to go live just in case something is lost or broken in a way that is difficult to recreate.), pull origin master into your local master, create a new branch for your current task, and repeat this process safely.
 
 ## GitHub Centralized Workflow
 
   >When following these instructions, the lines that do not begin with an uppercase letter are to be typed into the command line. Of course, you will want to substitute the name of your branch wherever you see branch-name.
+  >
+  >On your computer, create a folder where you want to store the repository.
+  >
+  >On the github website navigate to the repository you'd like to clone and click on the clone repository button. Copy the link provided.
+  >
+  >On your computer in your terminal, make sure you are in the folder where you'd like to store the repository.
 
-1. git clone repository
+1. git clone repository-link
 
-    a. (If using npm or yarn packages) yarn/npm install
+    a. where repository-link is the link you copied from the Github website.
 
-2. git checkout -b branch-name (only if creating a new branch)
+    b. (If using npm or yarn packages) yarn/npm install
+
+2. git checkout -b branch-name (only if creating a new branch, otherwise it will be git checkout branch-name)
 
     - By convention git hub repositories and branches do not use camel case, so use dashes.
 
     - As much as possible try to be working on different files from your team mates.
+
+3. Work on your task within your branch. Be sure to periodically save your work and:
 
     a. git status  (to see if there are changes that need to be added)
 
@@ -159,17 +138,19 @@ Once your code is approved and added to the project's working master, you can de
 
     c. git commit -m "description of work you did"
 
-    - Once you have a change to push.
+4. Once you have a change to push.
 
-3. git checkout master
+    - git checkout master
 
-4. git pull origin master
+5. git pull origin master
 
     a. (If using npm or yarn packages) yarn/npm install
 
-5. git checkout branch-name
+    b. If new packages were added:
 
-6. git merge master
+      - git add . and git commit -m"new packages added."
+
+6. git merge branch-name
 
     - This is where you will see conflicts if there are any
 
@@ -177,36 +158,40 @@ Once your code is approved and added to the project's working master, you can de
 
 7. Re-run your code to ensure everything still works.
 
-    - If it does not, fix the code, and start over again at step 3.
+    - If not, create a new branch in which to repair any broken code. Once it is working properly, begin again at step 3a.
 
-8. git push origin branch-name
+8. git checkout branch-name
 
-9. Create a pull request on GitHub
+9. git push origin branch-name
+
+10. Create a pull request on GitHub
 
     a. Let the team know about Pull Request on Slack
 
-10. Once your code has been merged: git checkout master
+11. Once your code has been merged: git checkout master
 
-11. git pull origin master
+12. git pull origin master
 
     a. yarn/npm install (If using npm or yarn packages)
 
-12. Run the code in your master branch to ensure one last time that everything is working as it should. If not, speak with your team.
+    b. If new packages were added:
 
-15. git checkout -b new-branch-name
+      - git add . and git commit -m"new packages added."
 
-16. Make sure to do an npm install before you start again just in-case there are new packages in the master.
+13. Run the code in your master branch to ensure one last time that everything is working as it should. If not, speak with your team.
 
-17. Do some more work and start again at step 3.
+14. git checkout -b new-branch-name
 
-    - If your have finished your project and everything is working as it should, you can now delete your local branches.
+15. Do some more work and start again at step 3a.
 
-18. git branch
+    - If you have finished your project and everything is working as it should, you can now delete your local branches by moving on to step 16.
+
+16. git branch
 
     - To get a list of branches on your local machine.
-    
-19. git branch -d branch-name
+
+17. git branch -d branch-name
 
     - For each of your local branches.
 
-20. You may get a warning about your branch not being fully merged at this point. If so: git branch -D branch-name
+18. You may get a warning about your branch not being fully merged at this point. If so: git branch -D branch-name
