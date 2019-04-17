@@ -144,33 +144,31 @@ The first portion of this exercise used a practice that is unsafe if working in 
 
 5. git pull origin master
 
-    a. (If using npm or yarn packages) yarn/npm install
+6. git checkout branch-name
 
-    b. If new packages were added:
-
-      - git add . and git commit -m"new packages added."
-
-6. git merge branch-name
+7. git merge master
 
     - This is where you will see conflicts if there are any
 
     - You should be able to reconcile these in VS Code at this point.
 
-7. Re-run your code to ensure everything still works.
+8. (If using npm or yarn packages) yarn/npm install
+
+9. Re-run your code to ensure everything still works.
 
     - If not, create a new branch in which to repair any broken code. Once it is working properly, begin again at step 3a.
 
-8. git checkout branch-name
+10. git checkout branch-name
 
-9. git push origin branch-name
+11. git push origin branch-name
 
-10. Create a pull request on GitHub
+12. Create a pull request on GitHub
 
     a. Let the team know about Pull Request on Slack
 
-11. Once your code has been merged: git checkout master
+13. Once your code has been merged: git checkout master
 
-12. git pull origin master
+14. git pull origin master
 
     a. yarn/npm install (If using npm or yarn packages)
 
@@ -178,20 +176,20 @@ The first portion of this exercise used a practice that is unsafe if working in 
 
       - git add . and git commit -m"new packages added."
 
-13. Run the code in your master branch to ensure one last time that everything is working as it should. If not, speak with your team.
+15. Run the code in your master branch to ensure one last time that everything is working as it should. If not, speak with your team.
 
-14. git checkout -b new-branch-name
+16. git checkout -b new-branch-name
 
-15. Do some more work and start again at step 3a.
+17. Do some more work and start again at step 3a.
 
     - If you have finished your project and everything is working as it should, you can now delete your local branches by moving on to step 16.
 
-16. git branch
+18. git branch
 
     - To get a list of branches on your local machine.
 
-17. git branch -d branch-name
+19. git branch -d branch-name
 
     - For each of your local branches.
 
-18. You may get a warning about your branch not being fully merged at this point. If so: git branch -D branch-name
+20. You may get a warning about your branch not being fully merged at this point. If so: git branch -D branch-name
