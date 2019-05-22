@@ -2,6 +2,8 @@
 
 ## Merge conflicts on purpose: A Tutorial, and Best Practices For Git Workflow
 
+  >When following these instructions, the lines that do not begin with an uppercase letter are to be typed into the command line. Of course, you will want to substitute the name of your branch wherever you see branch-name.
+
 1. On the Github website, create a new repository called merge-conflict and clone it to your computer.
 
 2. Create an index.html file that looks like this:
@@ -110,7 +112,7 @@ To be safe, it is always a good idea to pull the most current master before push
     git push origin my-branch
     ```
 
-8. Now go to github website. Navigate to your repository. You my be promted to create a pull request. If so click to create the merge and pull request. If not, navigate to your branch and create a new pull request anyway. 
+8. Now go to github website. Navigate to your repository. You my be promted to create a pull request. If so click to create the merge and pull request. If not, navigate to your branch and create a new pull request anyway.
 
 9. Once you create the pull request, you will be taken to another screen where you should see that the branches have no conflicts and are able to merge. If you would like to include a more detailed message at this point, you can. Once you have added any additional message if any, then click the green Create pull request button.
 
